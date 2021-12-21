@@ -12,13 +12,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        ViewController.swift
-        topSegmentedControl
+        
+        @IBOutlet weak var topCaptionSegmentedControl: UISegmentedControl!
+        
         bottomSegmentedControl
-        toCaptionLabel
+        topCaptionLabel
         bottomCaptionLabel
     }
-
+    func updateCaptions(){
+        let topIndex = topCaptionSegmentedControl.selectedSegmentIndex
+        topCaptionLabel.text = topChoices[topIndex].caption
+    }
+    @IBAction func options(_sender: UISegmentedControl){
+        
+    }
 
 }
 
